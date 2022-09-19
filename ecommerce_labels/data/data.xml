@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data noupdate="0">
+
+        <record id="ecommerce_label_1" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">12% Off</field>
+            <field name="position">topleft</field>
+            <field name="height">88</field>
+            <field name="width">80</field>
+            <field name="margin_left">9</field>
+            <field name="margin_top">-3</field>
+            <field file="ecommerce_labels/static/src/img/12%_Off_Sticker.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_2" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">20% Off</field>
+            <field name="position">topleft</field>
+            <field name="height">50</field>
+            <field name="width">100</field>
+            <field file="ecommerce_labels/static/src/img/20%_off.png" name="image" type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_3" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Big Sale</field>
+            <field name="position">topleft</field>
+            <field name="height">100</field>
+            <field name="width">109</field>
+            <field name="margin_top">-15</field>
+            <field file="ecommerce_labels/static/src/img/big_sale.png" name="image" type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_4" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Big Offer 2</field>
+            <field name="position">topleft</field>
+            <field name="height">100</field>
+            <field name="width">125</field>
+            <field name="margin_left">-10</field>
+            <field name="margin_top">-25</field>
+            <field file="ecommerce_labels/static/src/img/bi_offer.png" name="image" type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_5" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Black Friday</field>
+            <field name="position">topleft</field>
+            <field name="height">70</field>
+            <field name="width">60</field>
+            <field file="ecommerce_labels/static/src/img/black_fri_2.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_6" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Coming Soon</field>
+            <field name="position">topleft</field>
+            <field name="height">95</field>
+            <field name="width">103</field>
+            <field name="margin_left">-5</field>
+            <field name="margin_top">-14</field>
+            <field file="ecommerce_labels/static/src/img/coming_soon.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_7" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Coming Soon 2</field>
+            <field name="position">topleft</field>
+            <field name="height">40</field>
+            <field name="width">80</field>
+            <field file="ecommerce_labels/static/src/img/coming_soon_2.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_8" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Flat 50%</field>
+            <field name="position">topcenter</field>
+            <field name="height">40</field>
+            <field name="width">100</field>
+            <field file="ecommerce_labels/static/src/img/flat_50%_center.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_9" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Limted Offer</field>
+            <field name="position">topleft</field>
+            <field name="height">109</field>
+            <field name="width">130</field>
+            <field name="margin_left">-12</field>
+            <field name="margin_top">-9</field>
+            <field file="ecommerce_labels/static/src/img/limited_offer.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_10" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">New</field>
+            <field name="position">topright</field>
+            <field name="height">80</field>
+            <field name="width">80</field>
+            <field file="ecommerce_labels/static/src/img/new.png" name="image" type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_11" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">New 2</field>
+            <field name="position">topleft</field>
+            <field name="height">80</field>
+            <field name="width">80</field>
+            <field file="ecommerce_labels/static/src/img/new_2.png" name="image" type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_12" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">New 3</field>
+            <field name="position">topleft</field>
+            <field name="height">105</field>
+            <field name="width">110</field>
+            <field name="margin_left">-14</field>
+            <field name="margin_top">-12</field>
+            <field file="ecommerce_labels/static/src/img/new_3.png" name="image" type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_13" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Sale</field>
+            <field name="position">topright</field>
+            <field name="height">80</field>
+            <field name="width">80</field>
+            <field file="ecommerce_labels/static/src/img/sale_1.png" name="image" type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_14" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Save 15%</field>
+            <field name="position">topleft</field>
+            <field name="height">90</field>
+            <field name="width">77</field>
+            <field name="margin_left">7</field>
+            <field name="margin_top">-3</field>
+            <field file="ecommerce_labels/static/src/img/save_15.png" name="image" type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_15" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Sold</field>
+            <field name="position">topright</field>
+            <field name="height">130</field>
+            <field name="width">245</field>
+            <field name="width">-3</field>
+            <field file="ecommerce_labels/static/src/img/sold.png" name="image" type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_16" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Sold 2</field>
+            <field name="position">topleft</field>
+            <field name="height">75</field>
+            <field name="width">100</field>
+            <field name="margin_left">10</field>
+            <field file="ecommerce_labels/static/src/img/sold_out.png" name="image" type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_17" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Sold 3</field>
+            <field name="position">center</field>
+            <field name="height">95</field>
+            <field name="width">125</field>
+            <field name="margin_left">-32</field>
+            <field name="margin_top">-76</field>
+            <field file="ecommerce_labels/static/src/img/sold_out_2.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_18" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Special Offer</field>
+            <field name="position">topleft</field>
+            <field name="height">95</field>
+            <field name="width">94</field>
+            <field name="margin_top">-6</field>
+            <field file="ecommerce_labels/static/src/img/special_offer.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_19" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Special Offer 2</field>
+            <field name="position">topleft</field>
+            <field name="height">80</field>
+            <field name="width">80</field>
+            <field file="ecommerce_labels/static/src/img/special_offer_2.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_20" model="website.product.label">
+            <field name="label_type">defined</field>
+            <field name="name">Mid Season Sale</field>
+            <field name="position">topright</field>
+            <field name="height">115</field>
+            <field name="width">105</field>
+            <field name="margin_right">-13</field>
+            <field name="margin_top">-22</field>
+            <field file="ecommerce_labels/static/src/img/mid_season_sale.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <!-- NEW ADDED -->
+
+        <record id="ecommerce_label_21" model="website.product.label">
+            <field name="label_type">custom</field>
+            <field name="name">Ribbon 1</field>
+            <field name="height">70</field>
+            <field name="width">65</field>
+            <field name="position">topleft</field>
+            <field name="margin_left">5</field>
+            <field name="margin_top">-5</field>
+            <field name="font_color">white</field>
+            <field name="font_size">13</field>
+            <field name="font_left">5</field>
+            <field file="ecommerce_labels/static/src/img/custom/ribbon_1.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_22" model="website.product.label">
+            <field name="label_type">custom</field>
+            <field name="name">Ribbon 2</field>
+            <field name="height">90</field>
+            <field name="width">63</field>
+            <field name="position">topleft</field>
+            <field name="margin_left">5</field>
+            <field name="margin_top">-5</field>
+            <field name="font_color">#f4e541</field>
+            <field name="font_size">13</field>
+            <field name="font_left">3</field>
+            <field name="font_top">7</field>
+            <field name="font_rotate_label">rt_left</field>
+            <field name="font_rotate_value">12</field>
+            <field file="ecommerce_labels/static/src/img/custom/ribbon_2.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_23" model="website.product.label">
+            <field name="label_type">custom</field>
+            <field name="name">Ribbon 3</field>
+            <field name="height">90</field>
+            <field name="width">63</field>
+            <field name="position">topright</field>
+            <field name="margin_right">5</field>
+            <field name="margin_top">-5</field>
+            <field name="font_color">#f4e541</field>
+            <field name="font_size">13</field>
+            <field name="font_left">-4</field>
+            <field name="font_top">7</field>
+            <field name="font_rotate_label">rt_left</field>
+            <field name="font_rotate_value">12</field>
+            <field file="ecommerce_labels/static/src/img/custom/ribbon_3.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_24" model="website.product.label">
+            <field name="label_type">custom</field>
+            <field name="name">Ribbon 4</field>
+            <field name="height">25</field>
+            <field name="width">65</field>
+            <field name="position">topleft</field>
+            <field name="margin_left">-4</field>
+            <field name="margin_top">5</field>
+            <field name="rotate_value">-23</field>
+            <field name="font_color">white</field>
+            <field name="font_left">-7</field>
+            <field name="font_top">1</field>
+            <field name="font_rotate_label">rt_left</field>
+            <field name="font_rotate_value">-23</field>
+            <field file="ecommerce_labels/static/src/img/custom/ribbon_4.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_25" model="website.product.label">
+            <field name="label_type">custom</field>
+            <field name="name">Ribbon 5</field>
+            <field name="height">35</field>
+            <field name="width">150</field>
+            <field name="position">topleft</field>
+            <field name="margin_left">-7</field>
+            <field name="font_color">white</field>
+            <field file="ecommerce_labels/static/src/img/custom/ribbon_5.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_26" model="website.product.label">
+            <field name="label_type">custom</field>
+            <field name="name">Ribbon 6</field>
+            <field name="height">85</field>
+            <field name="width">60</field>
+            <field name="position">topright</field>
+            <field name="font_color">#f4e541</field>
+            <field name="font_left">-5</field>
+            <field name="font_top">17</field>
+            <field file="ecommerce_labels/static/src/img/custom/ribbon_6.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_27" model="website.product.label">
+            <field name="label_type">custom</field>
+            <field name="name">Ribbon 7</field>
+            <field name="height">80</field>
+            <field name="width">75</field>
+            <field name="position">topright</field>
+            <field name="margin_right">-7</field>
+            <field name="margin_top">-7</field>
+            <field name="font_color">#abff31</field>
+            <field name="font_top">-7</field>
+            <field name="font_rotate_label">rt_right</field>
+            <field name="font_rotate_value">45</field>
+            <field file="ecommerce_labels/static/src/img/custom/ribbon_7.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_28" model="website.product.label">
+            <field name="label_type">custom</field>
+            <field name="name">Ribbon 8</field>
+            <field name="height">65</field>
+            <field name="width">55</field>
+            <field name="position">topleft</field>
+            <field name="margin_top">-3</field>
+            <field name="font_color">white</field>
+            <field name="font_size">17</field>
+            <field name="font_left">-3</field>
+            <field name="font_top">4</field>
+            <field file="ecommerce_labels/static/src/img/custom/ribbon_8.png" name="image"
+                   type="base64"/>
+        </record>
+
+        <record id="ecommerce_label_29" model="website.product.label">
+            <field name="label_type">custom</field>
+            <field name="name">Ribbon 9</field>
+            <field name="height">25</field>
+            <field name="width">55</field>
+            <field name="position">topleft</field>
+            <field name="margin_left">-5</field>
+            <field name="margin_top">3</field>
+            <field name="font_color">white</field>
+            <field name="font_left">-10</field>
+            <field file="ecommerce_labels/static/src/img/custom/ribbon_9.png" name="image"
+                   type="base64"/>
+        </record>
+
+    </data>
+</openerp>

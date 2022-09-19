@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <!-- ecommerce.products_item page -->
+        <template id="show_sale_count_in_products_item_page" inherit_id="ecommerce.products_item" active="True"
+                  customize_show="True" name="Website Sale Count">
+            <xpath expr="//div[@class='product_price mb-1']" position="before">
+                <t t-if="product.sudo().sales_count &gt; 0">
+                    <div class="show_sale_count_1" title="Total No. of Sales Count">
+                        <i class="fa fa-shopping-cart"/>
+                        <sup t-attf-class="show_number_of_counts label label-primary"
+                             t-esc="product.sudo().sales_count"/>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+
+        <!-- ecommerce.product page -->
+        <template id="show_sale_count_in_product_page" inherit_id="ecommerce.product" active="True"
+                  customize_show="True" name="Website Sale Count">
+            <xpath expr="//a[@id='add_to_cart']" position="before">
+                <t t-if="product.sudo().sales_count &gt; 0">
+                    <div class="show_sale_count" title="Total No. of Sales Count">
+                        <i class="fa fa-shopping-cart"/>
+                        <sup t-attf-class="show_number_of_counts label label-info" t-esc="product.sudo().sales_count"/>
+                        <span class="">+ Sold</span>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+
+    </data>
+</odoo>

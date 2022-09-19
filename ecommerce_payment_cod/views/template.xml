@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <template id="cod_acquirer_button">
+        <form t-att-action="tx_url" method="post">
+            <input type="hidden" name="csrf_token" t-att-value="request.csrf_token()"/>
+            <input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+            <!--t t-if="return_url"-->
+            <input t-if="return_url" type='hidden' name='return_url' t-att-value='return_url'/>
+            <!--/t-->
+            <input type='hidden' name='reference' t-att-value='reference'/>
+            <input type='hidden' name='amount' t-att-value='amount'/>
+            <input type='hidden' name='currency' t-att-value='currency.name'/>
+        </form>
+    </template>
+
+    <template id="website_product_cod" inherit_id='ecommerce.product'>
+        <xpath expr="//a[@id='add_to_cart']" position="after">
+            <hr/>
+            <t t-foreach="website.get_cod_conf()" t-as='cod'>
+                <t t-if="product.cod_available == True">
+
+                    <p>
+                        <span style="color:green"><t t-esc='cod.cod_config.cod_msg'/></span>
+                    </p>
+                    <p>
+                        <t t-esc='cod.cod_config.cod_poilicy'/>
+                    </p>
+                    <t t-if="cod.cod_config.delivery_date == True">
+                        <p>
+                            This Product will be Delivered within <t t-esc='cod.cod_config.exp_delivery_interval'/>
+                            days.
+                        </p>
+                    </t>
+                </t>
+
+                <t t-if="product.cod_available == False">
+                    <p>
+                        <span style="color:red"><t t-esc='cod.cod_config.cod_unavailable_msg'/></span>
+                    </p>
+                </t>
+            </t>
+        </xpath>
+        <xpath expr="//div[@id='product_details']/p[last()]" position="replace">
+            <p t-else=""></p>
+        </xpath>
+    </template>
+
+    <template id="website_product_cod_payment" inherit_id='ecommerce.payment'>
+        <xpath expr="//div[@id='wrap']/div/div/div[@class='col-12 col-xl order-xl-1 oe_cart']/div[@id='address_on_payment']"
+               position="before">
+
+            <t t-set="cod_config" t-value="website.get_cod_conf()"/>
+            <t t-if="cod_config.state != 'disabled'">
+                <t t-set='cod_not' t-value='0'/>
+                <t t-foreach="cod_config" t-as='cod2'>
+                    <t t-foreach="website.sale_get_order().website_order_line" t-as="line">
+                        <t t-if="order.amount_total &gt; cod2.cod_config.max_amt or order.amount_total &lt; cod2.cod_config.min_amt or line.product_id.product_tmpl_id in cod2.cod_config.excl_product or website.get_all_zip() == 'No'">
+                            <t t-set='cod_not' t-value='cod_not + 1'/>
+                        </t>
+                    </t>
+                </t>
+                <t t-if="cod_not != 0">
+                    <br/>
+                    <div class="alert alert-danger">
+                        <t t-foreach="cod_config" t-as='cod_pay'>
+                            <h4><t t-esc='cod_pay.cod_config.cod_unavailable_msg_payment'/></h4>
+                        </t>
+                    </div>
+                </t>
+            </t>
+        </xpath>
+    </template>
+
+</odoo>

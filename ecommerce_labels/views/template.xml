@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!-- Product item used by /shop inherit -->
+        <template id="product_listing_page_extended" inherit_id='ecommerce.products_item'>
+
+            <!-- Add Label on Shop/Product Listing Page -->
+            <xpath expr="//div[hasclass('card-body')]" position="after">
+                <t t-if="product.select_label">
+                    <div t-att-class="product.select_label.position">
+
+                        <t t-if="product.select_label.label_type == 'defined'">
+                            <span>
+                                <t t-if="product.select_label.rotate_label == 'rt_left'">
+                                    <t t-set="rotate_left" t-value="product.select_label.rotate_label"></t>
+                                </t>
+                                <t t-if="product.select_label.rotate_label == 'rt_right'">
+                                    <t t-set="rotate_right" t-value="product.select_label.rotate_label"></t>
+                                </t>
+                                <t t-if="rotate_left">
+                                    <img class="img img-responsive"
+                                         t-att-src="website.image_url(product.select_label, 'image')"
+                                         t-att-title="product.select_label.name"
+                                         t-attf-style="height:#{product.select_label.height or '0'}px;width:#{product.select_label.width or '0'}px;margin-left:#{product.select_label.margin_left or '0'}px;margin-right:#{product.select_label.margin_right or '0'}px;margin-top:#{product.select_label.margin_top or '0'}px;margin-bottom:#{product.select_label.margin_bottom or '0'}px;transform:rotate(-#{product.select_label.rotate_value or '0'}deg)"
+                                         role="img"/>
+                                </t>
+                                <t t-if="rotate_right">
+                                    <img class="img img-responsive"
+                                         t-att-src="website.image_url(product.select_label, 'image')"
+                                         t-att-title="product.select_label.name"
+                                         t-attf-style="height:#{product.select_label.height or '0'}px;width:#{product.select_label.width or '0'}px;margin-left:#{product.select_label.margin_left or '0'}px;margin-right:#{product.select_label.margin_right or '0'}px;margin-top:#{product.select_label.margin_top or '0'}px;margin-bottom:#{product.select_label.margin_bottom or '0'}px;transform:rotate(#{product.select_label.rotate_value or '0'}deg)"
+                                         role="img"/>
+                                </t>
+                                <t t-if="not product.select_label.rotate_label">
+                                    <img class="img img-responsive"
+                                         t-att-src="website.image_url(product.select_label, 'image')"
+                                         t-att-title="product.select_label.name"
+                                         t-attf-style="height:#{product.select_label.height or '0'}px;width:#{product.select_label.width or '0'}px;margin-left:#{product.select_label.margin_left or '0'}px;margin-right:#{product.select_label.margin_right or '0'}px;margin-top:#{product.select_label.margin_top or '0'}px;margin-bottom:#{product.select_label.margin_bottom or '0'}px;"
+                                         role="img"/>
+                                </t>
+                            </span>
+                        </t>
+
+                        <!-- Custom Labels -->
+
+                        <t t-if="product.select_label.label_type == 'custom'">
+                            <span>
+                                <!-- SET IMAGE ROTATION -->
+                                <t t-if="product.select_label.rotate_label == 'rt_left'">
+                                    <t t-set="rotate_left" t-value="product.select_label.rotate_label"></t>
+                                </t>
+                                <t t-if="product.select_label.rotate_label == 'rt_right'">
+                                    <t t-set="rotate_right" t-value="product.select_label.rotate_label"></t>
+                                </t>
+
+                                <!-- SET FONT ROTATION -->
+                                <t t-if="product.select_label.font_rotate_label == 'rt_left'">
+                                    <t t-set="font_rotate_left" t-value="product.select_label.font_rotate_label"></t>
+                                </t>
+                                <t t-if="product.select_label.font_rotate_label == 'rt_right'">
+                                    <t t-set="font_rotate_right" t-value="product.select_label.font_rotate_label"></t>
+                                </t>
+
+                                <t t-if="rotate_left">
+                                    <img class="img img-responsive"
+                                         t-att-src="website.image_url(product.select_label, 'image')"
+                                         t-att-title="product.select_label.name"
+                                         t-attf-style="height:#{product.select_label.height or '0'}px;width:#{product.select_label.width or '0'}px;margin-left:#{product.select_label.margin_left or '0'}px;margin-right:#{product.select_label.margin_right or '0'}px;margin-top:#{product.select_label.margin_top or '0'}px;margin-bottom:#{product.select_label.margin_bottom or '0'}px;transform:rotate(-#{product.select_label.rotate_value or '0'}deg)"
+                                         role="img"/>
+
+                                    <t t-if="font_rotate_left">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;transform:rotate(-#{product.select_label.font_rotate_value or '0'}deg)"/>
+                                    </t>
+                                    <t t-if="font_rotate_right">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;transform:rotate(#{product.select_label.font_rotate_value or '0'}deg)"/>
+                                    </t>
+                                    <t t-if="not product.select_label.font_rotate_label">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;"/>
+                                    </t>
+                                </t>
+                                <t t-if="rotate_right">
+                                    <img class="img img-responsive"
+                                         t-att-src="website.image_url(product.select_label, 'image')"
+                                         t-att-title="product.select_label.name"
+                                         t-attf-style="height:#{product.select_label.height or '0'}px;width:#{product.select_label.width or '0'}px;margin-left:#{product.select_label.margin_left or '0'}px;margin-right:#{product.select_label.margin_right or '0'}px;margin-top:#{product.select_label.margin_top or '0'}px;margin-bottom:#{product.select_label.margin_bottom or '0'}px;transform:rotate(#{product.select_label.rotate_value or '0'}deg)"
+                                         role="img"/>
+
+                                    <t t-if="font_rotate_left">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;transform:rotate(-#{product.select_label.font_rotate_value or '0'}deg)"/>
+                                    </t>
+                                    <t t-if="font_rotate_right">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;transform:rotate(#{product.select_label.font_rotate_value or '0'}deg)"/>
+                                    </t>
+                                    <t t-if="not product.select_label.font_rotate_label">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;"/>
+                                    </t>
+                                </t>
+                                <t t-if="not product.select_label.rotate_label">
+                                    <img class="img img-responsive"
+                                         t-att-src="website.image_url(product.select_label, 'image')"
+                                         t-att-title="product.select_label.name"
+                                         t-attf-style="height:#{product.select_label.height or '0'}px;width:#{product.select_label.width or '0'}px;margin-left:#{product.select_label.margin_left or '0'}px;margin-right:#{product.select_label.margin_right or '0'}px;margin-top:#{product.select_label.margin_top or '0'}px;margin-bottom:#{product.select_label.margin_bottom or '0'}px;"
+                                         role="img"/>
+                                    <t t-if="font_rotate_left">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;transform:rotate(-#{product.select_label.font_rotate_value or '0'}deg)"/>
+                                    </t>
+                                    <t t-if="font_rotate_right">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;transform:rotate(#{product.select_label.font_rotate_value or '0'}deg)"/>
+                                    </t>
+                                    <t t-if="not product.select_label.font_rotate_label">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;"/>
+                                    </t>
+                                </t>
+                            </span>
+                        </t>
+
+                    </div>
+                </t>
+            </xpath>
+
+        </template>
+
+
+        <!-- /shop/product single product page -->
+        <template id="single_product_page_extended" inherit_id='ecommerce.product'>
+
+            <!-- Add Label on Single Product Page -->
+            <xpath expr="//div[hasclass('col-md-6')]" position="inside">
+                <t t-if="product.select_label">
+                    <div t-att-class="product.select_label.position">
+                        <t t-if="product.select_label.label_type == 'defined'">
+                            <span>
+                                <t t-if="product.select_label.rotate_label == 'rt_left'">
+                                    <t t-set="rotate_left" t-value="product.select_label.rotate_label"></t>
+                                </t>
+                                <t t-if="product.select_label.rotate_label == 'rt_right'">
+                                    <t t-set="rotate_right" t-value="product.select_label.rotate_label"></t>
+                                </t>
+                                <t t-if="rotate_left">
+                                    <img class="img img-responsive"
+                                         t-att-src="website.image_url(product.select_label, 'image')"
+                                         t-att-title="product.select_label.name"
+                                         t-attf-style="height:#{product.select_label.height or '0'}px;width:#{product.select_label.width or '0'}px;margin-left:#{product.select_label.margin_left or '0'}px;margin-right:#{product.select_label.margin_right or '0'}px;margin-top:#{product.select_label.margin_top or '0'}px;margin-bottom:#{product.select_label.margin_bottom or '0'}px;transform:rotate(-#{product.select_label.rotate_value or '0'}deg)"
+                                         role="img"/>
+                                </t>
+                                <t t-if="rotate_right">
+                                    <img class="img img-responsive"
+                                         t-att-src="website.image_url(product.select_label, 'image')"
+                                         t-att-title="product.select_label.name"
+                                         t-attf-style="height:#{product.select_label.height or '0'}px;width:#{product.select_label.width or '0'}px;margin-left:#{product.select_label.margin_left or '0'}px;margin-right:#{product.select_label.margin_right or '0'}px;margin-top:#{product.select_label.margin_top or '0'}px;margin-bottom:#{product.select_label.margin_bottom or '0'}px;transform:rotate(#{product.select_label.rotate_value or '0'}deg)"
+                                         role="img"/>
+                                </t>
+                                <t t-if="not product.select_label.rotate_label">
+                                    <img class="img img-responsive"
+                                         t-att-src="website.image_url(product.select_label, 'image')"
+                                         t-att-title="product.select_label.name"
+                                         t-attf-style="height:#{product.select_label.height or '0'}px;width:#{product.select_label.width or '0'}px;margin-left:#{product.select_label.margin_left or '0'}px;margin-right:#{product.select_label.margin_right or '0'}px;margin-top:#{product.select_label.margin_top or '0'}px;margin-bottom:#{product.select_label.margin_bottom or '0'}px;"
+                                         role="img"/>
+                                </t>
+                            </span>
+                        </t>
+
+                        <!-- Custom Labels -->
+
+                        <t t-if="product.select_label.label_type == 'custom'">
+                            <span>
+                                <!-- SET IMAGE ROTATION -->
+                                <t t-if="product.select_label.rotate_label == 'rt_left'">
+                                    <t t-set="rotate_left" t-value="product.select_label.rotate_label"></t>
+                                </t>
+                                <t t-if="product.select_label.rotate_label == 'rt_right'">
+                                    <t t-set="rotate_right" t-value="product.select_label.rotate_label"></t>
+                                </t>
+
+                                <!-- SET FONT ROTATION -->
+                                <t t-if="product.select_label.font_rotate_label == 'rt_left'">
+                                    <t t-set="font_rotate_left" t-value="product.select_label.font_rotate_label"></t>
+                                </t>
+                                <t t-if="product.select_label.font_rotate_label == 'rt_right'">
+                                    <t t-set="font_rotate_right" t-value="product.select_label.font_rotate_label"></t>
+                                </t>
+
+                                <t t-if="rotate_left">
+                                    <img class="img img-responsive"
+                                         t-att-src="website.image_url(product.select_label, 'image')"
+                                         t-att-title="product.select_label.name"
+                                         t-attf-style="height:#{product.select_label.height or '0'}px;width:#{product.select_label.width or '0'}px;margin-left:#{product.select_label.margin_left or '0'}px;margin-right:#{product.select_label.margin_right or '0'}px;margin-top:#{product.select_label.margin_top or '0'}px;margin-bottom:#{product.select_label.margin_bottom or '0'}px;transform:rotate(-#{product.select_label.rotate_value or '0'}deg)"
+                                         role="img"/>
+
+                                    <t t-if="font_rotate_left">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;transform:rotate(-#{product.select_label.font_rotate_value or '0'}deg)"/>
+                                    </t>
+                                    <t t-if="font_rotate_right">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;transform:rotate(#{product.select_label.font_rotate_value or '0'}deg)"/>
+                                    </t>
+                                    <t t-if="not product.select_label.font_rotate_label">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;"/>
+                                    </t>
+                                </t>
+                                <t t-if="rotate_right">
+                                    <img class="img img-responsive"
+                                         t-att-src="website.image_url(product.select_label, 'image')"
+                                         t-att-title="product.select_label.name"
+                                         t-attf-style="height:#{product.select_label.height or '0'}px;width:#{product.select_label.width or '0'}px;margin-left:#{product.select_label.margin_left or '0'}px;margin-right:#{product.select_label.margin_right or '0'}px;margin-top:#{product.select_label.margin_top or '0'}px;margin-bottom:#{product.select_label.margin_bottom or '0'}px;transform:rotate(#{product.select_label.rotate_value or '0'}deg)"
+                                         role="img"/>
+
+                                    <t t-if="font_rotate_left">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;transform:rotate(-#{product.select_label.font_rotate_value or '0'}deg)"/>
+                                    </t>
+                                    <t t-if="font_rotate_right">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;transform:rotate(#{product.select_label.font_rotate_value or '0'}deg)"/>
+                                    </t>
+                                    <t t-if="not product.select_label.font_rotate_label">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;"/>
+                                    </t>
+                                </t>
+                                <t t-if="not product.select_label.rotate_label">
+                                    <img class="img img-responsive"
+                                         t-att-src="website.image_url(product.select_label, 'image')"
+                                         t-att-title="product.select_label.name"
+                                         t-attf-style="height:#{product.select_label.height or '0'}px;width:#{product.select_label.width or '0'}px;margin-left:#{product.select_label.margin_left or '0'}px;margin-right:#{product.select_label.margin_right or '0'}px;margin-top:#{product.select_label.margin_top or '0'}px;margin-bottom:#{product.select_label.margin_bottom or '0'}px;"
+                                         role="img"/>
+                                    <t t-if="font_rotate_left">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;transform:rotate(-#{product.select_label.font_rotate_value or '0'}deg)"/>
+                                    </t>
+                                    <t t-if="font_rotate_right">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;transform:rotate(#{product.select_label.font_rotate_value or '0'}deg)"/>
+                                    </t>
+                                    <t t-if="not product.select_label.font_rotate_label">
+                                        <span class="label_font" t-esc="product.lbl_title"
+                                              t-attf-style="padding:5px 15px;font-weight:bold;position:absolute;color:#{product.select_label.font_color or 'none'};font-size:#{product.select_label.font_size or '15'}px;left:#{product.select_label.font_left or '0'}px;right:#{product.select_label.font_right or '0'}px;top:#{product.select_label.font_top or '0'}px;bottom:#{product.select_label.font_bottom or '0'}px;"/>
+                                    </t>
+                                </t>
+                            </span>
+                        </t>
+                    </div>
+                </t>
+            </xpath>
+
+        </template>
+
+
+    </data>
+</odoo>

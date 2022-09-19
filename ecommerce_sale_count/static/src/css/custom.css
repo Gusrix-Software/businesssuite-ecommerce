@@ -1,0 +1,15 @@
+.show_sale_count {
+    color: #fff;
+    background-color: #337AB7;
+    border-color: #337AB7;
+    margin-top: 8px !important;
+    padding: 10px 16px;
+    font-size: 18px;
+    line-height: 1.3333333;
+    width: 150px;
+}
+
+.show_sale_count_1 {
+    float: right;
+    color: #337AB7;
+}

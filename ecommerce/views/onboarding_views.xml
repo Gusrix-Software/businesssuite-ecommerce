@@ -1,0 +1,18 @@
+<odoo>
+    <!-- PAYMENT ACQUIRER -->
+    <template id="ecommerce_onboarding_payment_acquirer_step" primary="True"
+              inherit_id="payment.onboarding_payment_acquirer_step">
+        <xpath expr="//t[@t-set='method']" position="replace">
+            <t t-set="method" t-value="'action_open_ecommerce_onboarding_payment_acquirer'"/>
+        </xpath>
+    </template>
+
+    <record id="action_open_ecommerce_onboarding_payment_acquirer_wizard" model="ir.actions.act_window">
+        <field name="name">Choose a payment method</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">ecommerce.payment.acquirer.onboarding.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="payment.payment_acquirer_onboarding_wizard_form"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

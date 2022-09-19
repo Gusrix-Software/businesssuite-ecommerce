@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="group_sync_cat_product" model="res.groups">
+            <field name="name">Sync eCommerce category/product</field>
+        </record>
+    </data>
+</odoo>

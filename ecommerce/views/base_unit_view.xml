@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <record id='base_unit_action' model='ir.actions.act_window'>
+        <field name="name">Base Units</field>
+        <field name="res_model">ecommerce.base.unit</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <menuitem name="Base Units" id="website_base_unit_menu" action="base_unit_action"
+              parent="ecommerce.menu_product_settings" sequence="5" groups="ecommerce.group_show_uom_price"/>
+
+</odoo>

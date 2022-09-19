@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+
+        <record id="view_product_category_change_form_view" model="ir.ui.view">
+            <field name="name">view_product_category_change_form</field>
+            <field name="model">product.category.changes</field>
+            <field name="arch" type="xml">
+                <form string="Invoice Sales Order">
+                    <group string="Select Operations">
+                        <field name="action_details" widget="radio" nolabel="1"/>
+                    </group>
+                    <group string="Select Categories which you want to sync in ecommerce">
+                        <field name="category_ids" nolabel="1"/>
+                    </group>
+                    <footer>
+                        <button name="update_changes" string="Save" type="object" class="btn-primary"/>
+                        <button string="Cancel" class="btn-secondary" special="cancel"/>
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_product_category_changes" model="ir.actions.act_window">
+            <field name="name">Sync eCommerce Categories</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">product.category.changes</field>
+            <field name="view_mode">form</field>
+            <field name="target">new</field>
+        </record>
+
+        <menuitem id="menu_sync_category"
+                  name="Sync eCommerce categories"
+                  sequence="2"
+                  action="action_product_category_changes"
+                  groups="ecommerce_categories_sync.group_sync_cat_product"
+                  parent="website.menu_website_configuration"/>
+    </data>
+</odoo>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="pre_order_product_page" name="Pre-Order" inherit_id="ecommerce.product" customize_show="True">
+            <xpath expr="//a[@id='add_to_cart']" position="before">
+                <t t-if="product.is_website_note">
+                    <div class="d-flex flex-column mt-3 mb-5" style="gap: 1rem">
+                        <span class="h5 font-weight-bold">Notes:</span>
+                        <textarea class="form-control product_note" name="product_note" cols="40" rows="5"
+                                  type="text"></textarea>
+                        <input class="submit_note" type="submit" style="display:none;"/>
+                    </div>
+                </t>
+            </xpath>
+        </template>
+    </data>
+</odoo>

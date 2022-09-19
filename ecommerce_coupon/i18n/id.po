@@ -1,0 +1,233 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ecommerce_coupon
+# 
+# Translators:
+# Muftiara Syuhada <muftiara.syuhada@gmail.com>, 2021
+# Abdul Munif Hanafi <amunifhanafi@gmail.com>, 2022
+# Wahyu Setiawan <wahyusetiaaa@gmail.com>, 2022
+# Ryanto The <ry.the77@gmail.com>, 2022
+# Andhitia Rama <andhitia.r@gmail.com>, 2022
+# Martin Trigaux, 2022
+# 
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server saas~14.5\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-09-14 10:29+0000\n"
+"PO-Revision-Date: 2021-09-14 12:29+0000\n"
+"Last-Translator: Martin Trigaux, 2022\n"
+"Language-Team: Indonesian (https://www.transifex.com/odoo/teams/41243/id/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: \n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#. module: ecommerce_coupon
+#: code:addons/ecommerce_coupon/wizard/sale_coupon_share.py:0
+#, python-format
+msgid "A coupon is needed for coupon programs."
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.layout
+msgid "Could not apply the promo code:"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model:ir.model,name:ecommerce_coupon.model_coupon_coupon
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_share__coupon_id
+msgid "Coupon"
+msgstr "Kupon"
+
+#. module: ecommerce_coupon
+#: model:ir.model,name:ecommerce_coupon.model_coupon_program
+msgid "Coupon Program"
+msgstr "Program Kupon"
+
+#. module: ecommerce_coupon
+#: model:ir.ui.menu,name:ecommerce_coupon.menu_coupon_type_config
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.res_config_settings_view_form
+msgid "Coupon Programs"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model:ir.model,name:ecommerce_coupon.model_coupon_share
+msgid "Create links that apply a coupon and redirect to a specific page"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_share__create_uid
+msgid "Created by"
+msgstr "Dibuat oleh"
+
+#. module: ecommerce_coupon
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_share__create_date
+msgid "Created on"
+msgstr "Dibuat pada"
+
+#. module: ecommerce_coupon
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.cart_discount
+msgid "Discount:"
+msgstr "Diskon:"
+
+#. module: ecommerce_coupon
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.cart_discount
+msgid "Discounted amount"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_share__display_name
+msgid "Display Name"
+msgstr "Nama Tampilan"
+
+#. module: ecommerce_coupon
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.coupon_share_view_form
+msgid "Done"
+msgstr "Selesai"
+
+#. module: ecommerce_coupon
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.coupon_share_view_form
+msgid "Generate Short Link"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_share__id
+msgid "ID"
+msgstr "ID"
+
+#. module: ecommerce_coupon
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.sale_coupon_result
+msgid "Invalid or expired promo code."
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_share____last_update
+msgid "Last Modified on"
+msgstr "Terakhir diubah pada"
+
+#. module: ecommerce_coupon
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_share__write_uid
+msgid "Last Updated by"
+msgstr "Terakhir diperbarui oleh"
+
+#. module: ecommerce_coupon
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_share__write_date
+msgid "Last Updated on"
+msgstr "Terakhir diperbarui pada"
+
+#. module: ecommerce_coupon
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_share__program_id
+msgid "Program"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_share__program_website_id
+msgid "Program Website"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_share__promo_code
+msgid "Promo Code"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model:ir.ui.menu,name:ecommerce_coupon.menu_promotion_type_config
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.res_config_settings_view_form
+msgid "Promotion Programs"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: code:addons/ecommerce_coupon/wizard/sale_coupon_share.py:0
+#, python-format
+msgid "Provide either a coupon or a program."
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_share__redirect
+msgid "Redirect"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model:ir.model.fields,help:ecommerce_coupon.field_coupon_program__website_id
+#: model:ir.model.fields,help:ecommerce_coupon.field_coupon_share__program_website_id
+msgid "Restrict publishing to this website."
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model:ir.model,name:ecommerce_coupon.model_sale_order
+msgid "Sales Order"
+msgstr "Order Penjualan"
+
+#. module: ecommerce_coupon
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.coupon_view_tree
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.sale_coupon_program_view_tree_website
+msgid "Share"
+msgstr "Bagikan"
+
+#. module: ecommerce_coupon
+#: code:addons/ecommerce_coupon/wizard/sale_coupon_share.py:0
+#: code:addons/ecommerce_coupon/wizard/sale_coupon_share.py:0
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.coupon_share_view_form
+#, python-format
+msgid "Share Coupon"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_share__share_link
+msgid "Share Link"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: code:addons/ecommerce_coupon/controllers/main.py:0
+#, python-format
+msgid ""
+"The coupon will be automatically applied when you add something in your "
+"cart."
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.layout
+msgid "The following promo code was applied on your order:"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: code:addons/ecommerce_coupon/models/sale_coupon_program.py:0
+#, python-format
+msgid "The program code must be unique by website!"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: code:addons/ecommerce_coupon/wizard/sale_coupon_share.py:0
+#, python-format
+msgid "The shared website should correspond to the website of the program."
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_program__website_id
+#: model:ir.model.fields,field_description:ecommerce_coupon.field_coupon_share__website_id
+msgid "Website"
+msgstr "Situs web"
+
+#. module: ecommerce_coupon
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.coupon_share_view_form
+msgid ""
+"You can share this promotion with your customers.\n"
+"                            It will be applied at checkout when the customer uses this link."
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.sale_coupon_result
+msgid "You have successfully applied following promo code:"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.sale_coupon_result
+msgid "Your reward"
+msgstr ""
+
+#. module: ecommerce_coupon
+#: model_terms:ir.ui.view,arch_db:ecommerce_coupon.sale_coupon_result
+msgid "is available on a next order with this promo code:"
+msgstr ""

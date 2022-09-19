@@ -1,0 +1,6 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+ecommerce_stock_visitor_user,ecommerce_stock_visitor_user_name,stock.model_stock_warehouse,,1,0,0,0
+ecommerce_stock_visitor_location,ecommerce_stock_visitor_user_location,stock.model_stock_location,,1,0,0,0
+ecommerce_stock_visitor_move,ecommerce_stock_visitor_user_move,stock.model_stock_move,,1,0,0,0
+ecommerce_stock_visitor_quant,ecommerce_stock_visitor_user_quant,stock.model_stock_quant,,1,0,0,0
+ecommerce_stock_portal_quant,ecommerce_stock_visitor_user_quant,uom.model_uom_uom,,1,0,0,0
