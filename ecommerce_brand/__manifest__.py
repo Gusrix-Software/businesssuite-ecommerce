@@ -9,7 +9,7 @@
     "depends": [
         "website",
         "ecommerce",
-        "bs_brand"
+        "brand"
     ],
     "data": [
         "views/template.xml",
