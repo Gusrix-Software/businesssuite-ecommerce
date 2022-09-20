@@ -1,5 +1,0 @@
-id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
-website_cod_user,website_cod_user_name,ecommerce_payment_cod.model_cod_config,,1,1,1,1
-web_res_zip,web.res.zip,ecommerce_payment_cod.model_res_zip,,1,1,1,1
-web_cod_payment_collection,web.cod.payment.collection,ecommerce_payment_cod.model_cod_payment_collection,,1,1,1,0
-access_sale_order_public,sale.order.public,sale.model_sale_order,base.group_public,1,1,0,0
